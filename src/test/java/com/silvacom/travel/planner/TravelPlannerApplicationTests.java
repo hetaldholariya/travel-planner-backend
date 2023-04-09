@@ -1,10 +1,10 @@
-package com.bezkoder.spring.jpa.h2;
+package com.silvacom.travel.planner;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-
+//owsasp 
 @SpringBootTest
-class SpringBootJpaH2ApplicationTests {
+class TravelPlannerApplicationTests {
 
 	@Test
 	void contextLoads() {
