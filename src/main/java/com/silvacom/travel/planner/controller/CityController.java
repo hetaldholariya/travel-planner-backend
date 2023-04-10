@@ -16,14 +16,27 @@ import org.springframework.web.bind.annotation.RestController;
 import com.silvacom.tarvel.planner.dto.CityDTO;
 import com.silvacom.travel.planner.services.CityService;
 
-@CrossOrigin(origins = "http://localhost:8081")
+/**
+ * This class is a controller for handling HTTP requests
+ * @author hdholariya
+ *
+ */
+@CrossOrigin(origins = "https://travel-planner-frontend.vercel.app/")
 @RestController
+// The base path for all endpoints in this controller
 @RequestMapping("/api")
 public class CityController {
 
+	/**
+	 * The instance of CityService.
+	 */
 	@Autowired
 	CityService cityService;
 	
+	/**
+	 * Handle GET requests to "/api/cities
+	 * @return The instance of ResponseEntity
+	 */
 	@GetMapping("/cities")
 	public ResponseEntity<List<CityDTO>> getAllCities() {
 		try {
@@ -37,6 +50,12 @@ public class CityController {
 		}
 	}
 
+	/**
+	 * Handle GET requests to "/api/city
+	 * @param name The name of the city
+	 * @param date The date for weather prediction
+	 * @return The instance of ResponseEntity
+	 */
 	@GetMapping("/city")
 	public ResponseEntity<CityDTO> getCityByName(@RequestParam(required = false) String name, @RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date) {
 		

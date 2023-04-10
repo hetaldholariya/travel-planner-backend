@@ -13,14 +13,26 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.silvacom.travel.planner.services.ForcastDateService;
 
-@CrossOrigin(origins = "http://localhost:8081")
+/**
+ * This class is a controller for handling HTTP requests
+ * @author hdholariya
+ *
+ */
+@CrossOrigin(origins = "https://travel-planner-frontend.vercel.app/")
 @RestController
 @RequestMapping("/api")
 public class ForcastDateController {
 
+	/**
+	 * The instance of ForcastDateService
+	 */
 	@Autowired
 	ForcastDateService forcastDateService;
 		
+	/**
+	 * Handle GET requests to "/api/dates"
+	 * @return The instance of ResponseEntity
+	 */
 	@GetMapping("/dates")
 	public ResponseEntity<List<LocalDate>> forcastDates() {
 		List<LocalDate> dates = forcastDateService.getDates();
