@@ -18,7 +18,7 @@ import com.silvacom.travel.planner.services.ForcastDateService;
  * @author hdholariya
  *
  */
-@CrossOrigin(origins = "https://travel-planner-frontend.vercel.app/")
+@CrossOrigin(origins = "https://travel-planner-frontend-2.azurewebsites.net/")
 @RestController
 @RequestMapping("/api")
 public class ForcastDateController {

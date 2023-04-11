@@ -21,7 +21,7 @@ import com.silvacom.travel.planner.services.CityService;
  * @author hdholariya
  *
  */
-@CrossOrigin(origins = "https://travel-planner-frontend.vercel.app/")
+@CrossOrigin(origins = "https://travel-planner-frontend-2.azurewebsites.net/")
 @RestController
 // The base path for all endpoints in this controller
 @RequestMapping("/api")
