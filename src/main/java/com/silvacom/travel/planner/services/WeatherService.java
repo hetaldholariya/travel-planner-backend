@@ -25,7 +25,14 @@ import com.silvacom.tarvel.planner.dto.WeatherMapTimeDTO;
 @Service
 public class WeatherService {
 
+	/**
+	 * Static URL for weather forcast API
+	 */
 	private final String URI = "http://api.openweathermap.org/data/2.5/forecast";
+	
+	/**
+	 * API ID
+	 */
 	private final String API_ID = "0b4ba9ce32d3e8c1c8cda4898c290586";
 
 	/**
